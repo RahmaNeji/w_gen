@@ -37,10 +37,12 @@ class CreateCommand {
         withSynchro = p0;
         if (_arg != null) {
           if (p0) {
-            Process.runSync("flutter", ["pub", "add", "synchro_http"]);
+            Process.runSync("flutter", ["pub", "add", "synchro_http"],
+                runInShell: true);
             print("running flutter pub add synchro_http");
           } else {
-            Process.runSync("flutter", ["pub", "add", "rxdart", "http"]);
+            Process.runSync("flutter", ["pub", "add", "rxdart", "http"],
+                runInShell: true);
             print("running flutter pub add rxdart http");
           }
         }
